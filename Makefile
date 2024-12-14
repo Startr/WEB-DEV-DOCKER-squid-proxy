@@ -32,3 +32,6 @@ it_a_terminal:
 		-p $(HOST_PORT):3128 \
 		-v $(CONFIG_FILE):$(CONTAINER_CONFIG_PATH) \
 		$(IMAGE_NAME) /bin/bash
+
+logs:
+	docker logs -f $(CONTAINER_NAME)
